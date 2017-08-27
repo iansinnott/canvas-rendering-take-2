@@ -13,4 +13,10 @@ Live Site: https://goblin-catcher.netlify.com/
 
 **NOTE:** The build is currently only for development. There is no distinction between prod and dev yet. Just one `webpack.config.js`. Just something to be aware of.
 
+## Improvements
 
+* Implement an actual game board with tiles
+  * Split images out so terrain can have a type
+  * Don't allow player to pass through trees
+* Make monster move
+  * Add simple avoidance AI
