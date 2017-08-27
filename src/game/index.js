@@ -70,16 +70,16 @@ export default function initialize() {
   };
 
   const update = (modifier) => {
-    if ('ArrowUp' in keysDown) {
+    if ('ArrowUp' in keysDown || 'k' in keysDown) {
       hero.y -= hero.speed * modifier;
     }
-    if ('ArrowDown' in keysDown) {
+    if ('ArrowDown' in keysDown || 'j' in keysDown) {
       hero.y += hero.speed * modifier;
     }
-    if ('ArrowLeft' in keysDown) {
+    if ('ArrowLeft' in keysDown || 'h' in keysDown) {
       hero.x -= hero.speed * modifier;
     }
-    if ('ArrowRight' in keysDown) {
+    if ('ArrowRight' in keysDown || 'l' in keysDown) {
       hero.x += hero.speed * modifier;
     }
 
