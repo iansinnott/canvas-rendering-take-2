@@ -69,18 +69,18 @@ export default function initialize() {
     );
   };
 
-  const update = (modifier) => {
+  const update = (timeElapsed) => {
     if ('ArrowUp' in keysDown || 'k' in keysDown) {
-      hero.y -= hero.speed * modifier;
+      hero.y -= hero.speed * timeElapsed;
     }
     if ('ArrowDown' in keysDown || 'j' in keysDown) {
-      hero.y += hero.speed * modifier;
+      hero.y += hero.speed * timeElapsed;
     }
     if ('ArrowLeft' in keysDown || 'h' in keysDown) {
-      hero.x -= hero.speed * modifier;
+      hero.x -= hero.speed * timeElapsed;
     }
     if ('ArrowRight' in keysDown || 'l' in keysDown) {
-      hero.x += hero.speed * modifier;
+      hero.x += hero.speed * timeElapsed;
     }
 
     if (hasCollision(hero, monster)) {
