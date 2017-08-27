@@ -20,3 +20,6 @@ Live Site: https://goblin-catcher.netlify.com/
   * Don't allow player to pass through trees
 * Make monster move
   * Add simple avoidance AI
+* Add audio of some sort
+* Improve sprites so something happens when the two characters collide
+* Full screen
