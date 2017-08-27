@@ -46,10 +46,11 @@ export default function initialize() {
   const keysDown = {};
 
   window.addEventListener('keydown', e => {
-    keysDown[e.which] = true;
+    console.log(e.key);
+    keysDown[e.key] = true;
   });
   window.addEventListener('keyup', e => {
-    delete keysDown[e.which];
+    delete keysDown[e.key];
   });
 
   const resetMonster = () => {
@@ -69,16 +70,16 @@ export default function initialize() {
   };
 
   const update = (modifier) => {
-    if (38 in keysDown) { // Up
+    if ('ArrowUp' in keysDown) {
       hero.y -= hero.speed * modifier;
     }
-    if (40 in keysDown) { // Down
+    if ('ArrowDown' in keysDown) {
       hero.y += hero.speed * modifier;
     }
-    if (37 in keysDown) { // Left
+    if ('ArrowLeft' in keysDown) {
       hero.x -= hero.speed * modifier;
     }
-    if (39 in keysDown) { // Right
+    if ('ArrowRight' in keysDown) {
       hero.x += hero.speed * modifier;
     }
 
