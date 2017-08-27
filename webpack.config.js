@@ -39,6 +39,12 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.png$/,
+        use: {
+          loader: 'file-loader',
+        },
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
